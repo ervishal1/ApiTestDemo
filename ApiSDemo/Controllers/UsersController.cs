@@ -47,7 +47,7 @@ namespace ApiSDemo.Controllers
 				var res = _Uof.Users.GetById(id);
 				if (res != null)
 				{
-					return StatusCode(200, new { Res = new Response { StatusCode = 200, Message = "Record Found!" }, User = res });
+					return StatusCode(200, new Response { StatusCode = 200, Message = "Record Found!", user = res });
 				}
 
 				return StatusCode(204, new Response { StatusCode = 204, Message = "No Content Avilable" });
@@ -68,6 +68,7 @@ namespace ApiSDemo.Controllers
 				var res = _Uof.Users.Find(x => (x.Email == user.Email && x.Password == user.Password)).FirstOrDefault();
 				if (res != null)
 				{
+					Request.HttpContext.Session.SetString("Auth", "User is Valid");
 					return Ok(new Response { StatusCode = 200, Message = "User Authenticated" });
 				}
 				return StatusCode(StatusCodes.Status401Unauthorized, "Unauthorized User");
@@ -101,27 +102,33 @@ namespace ApiSDemo.Controllers
 
 		[HttpPost]
 		[Route("")]
-		public Response Create(User user)
+		public IActionResult Create(User user)
 		{
 			try
 			{
+				var isExists = _Uof.Users.Find(x => x.Email.Equals(user.Email));
+				if (isExists != null)
+				{
+					return StatusCode(223,new Response { Message = "User Alrady Exists!", StatusCode = 223 });
+				}
+
 				var res = _Uof.Users.Create(user);
 				_Uof.Save();
 				if (res)
 				{
-					return (new Response { Message = "User Created Successfully!", StatusCode = 200 });
+					return StatusCode(201,new Response { Message = "User Created Successfully!", StatusCode = 201 });
 				}
-				return (new Response { Message = "Something Wrong User Not Created", StatusCode = 100 });
+				return StatusCode(StatusCodes.Status408RequestTimeout,new Response { Message = "Something Wrong User Not Created", StatusCode = 100 });
 			}
 			catch (System.Exception)
 			{
-				return (new Response { Message = "Something Wrong Server Error!", StatusCode = 500 });
+				return StatusCode(StatusCodes.Status500InternalServerError,new Response { Message = "Something Wrong Server Error!", StatusCode = 500 });
 			}
 		}
 
 		[HttpPut]
 		[Route("{id}")]
-		public Response Update(User user)
+		public Response Update([FromForm]User user)
 		{
 			try
 			{

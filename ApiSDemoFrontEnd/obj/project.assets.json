@@ -8990,11 +8990,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemoFrontEnd\\ApiSDemoFrontEnd.csproj",
+      "projectUniqueName": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemoFrontEnd\\ApiSDemoFrontEnd.csproj",
       "projectName": "ApiSDemoFrontEnd",
-      "projectPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemoFrontEnd\\ApiSDemoFrontEnd.csproj",
+      "projectPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemoFrontEnd\\ApiSDemoFrontEnd.csproj",
       "packagesPath": "C:\\Users\\lcom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemoFrontEnd\\obj\\",
+      "outputPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemoFrontEnd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lcom\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9011,8 +9011,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemo\\ApiSDemo.csproj": {
-              "projectPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemo\\ApiSDemo.csproj"
+            "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemo\\ApiSDemo.csproj": {
+              "projectPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemo\\ApiSDemo.csproj"
             }
           }
         }

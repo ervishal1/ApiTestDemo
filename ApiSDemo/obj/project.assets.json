@@ -6125,11 +6125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemo\\ApiSDemo.csproj",
+      "projectUniqueName": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemo\\ApiSDemo.csproj",
       "projectName": "ApiSDemo",
-      "projectPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemo\\ApiSDemo.csproj",
+      "projectPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemo\\ApiSDemo.csproj",
       "packagesPath": "C:\\Users\\lcom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiSDemo\\obj\\",
+      "outputPath": "C:\\Users\\lcom\\Desktop\\VS\\AspProjects\\ApiTestDemo\\ApiSDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lcom\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -36,6 +36,16 @@ namespace ApiSDemo
 			services.AddTransient<IFeedBackRepo, FeedBackRepo>();
 			services.AddTransient<IUnitOfWork, UnitOfWork>();
 
+			services.AddDistributedMemoryCache();
+
+			services.AddSession(options =>
+			{
+				options.Cookie.Name = ".UserAuth.Session";
+				options.IdleTimeout = TimeSpan.FromSeconds(10);
+				options.Cookie.HttpOnly = true;
+				options.Cookie.IsEssential = true;
+			});
+
 			services.AddCors();
 			//services.AddSession(op =>
 			//{
@@ -58,6 +68,8 @@ namespace ApiSDemo
 			//app.UseSession();
 
 			app.UseAuthorization();
+
+			app.UseSession();
 
 			app.UseEndpoints(endpoints =>
 			{

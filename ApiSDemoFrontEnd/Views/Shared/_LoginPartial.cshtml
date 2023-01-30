@@ -1,0 +1,21 @@
+﻿@using System.Net.Http;
+@using Microsoft.AspNetCore.Http;
+@using ApiSDemoFrontEnd.Utility;
+@inject IHttpContextAccessor Ha
+@{
+    string action = "Login";
+    string user = "Register";
+    if (Ha.HttpContext.Session.Get<UserAuth>("User") != null)
+    {
+        action = "Logout";
+        UserAuth u = Ha.HttpContext.Session.Get<UserAuth>("User");
+        user = u.Email;
+    }
+
+}
+<div>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item"><a class="nav-link text-dark" asp-controller="User" asp-action="@user">@user</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" asp-controller="User" asp-action="@action">@action</a></li>
+    </ul>
+</div>
