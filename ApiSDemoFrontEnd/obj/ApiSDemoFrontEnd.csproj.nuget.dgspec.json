@@ -124,6 +124,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.32, )"
@@ -137,6 +141,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.32, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.5.0, )"
             }
           },
           "imports": [

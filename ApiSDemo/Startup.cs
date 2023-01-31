@@ -1,6 +1,7 @@
 using ApiSDemo.Data;
 using ApiSDemo.Repositories.Infrastructure;
 using ApiSDemo.Repositories.Repos;
+using ApiSDemo.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -36,15 +37,10 @@ namespace ApiSDemo
 			services.AddTransient<IFeedBackRepo, FeedBackRepo>();
 			services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-			services.AddDistributedMemoryCache();
+			services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+			services.AddTransient<IMailService, MailService>();
 
-			services.AddSession(options =>
-			{
-				options.Cookie.Name = ".UserAuth.Session";
-				options.IdleTimeout = TimeSpan.FromSeconds(10);
-				options.Cookie.HttpOnly = true;
-				options.Cookie.IsEssential = true;
-			});
+			services.AddDistributedMemoryCache();
 
 			services.AddCors();
 			//services.AddSession(op =>
@@ -68,8 +64,6 @@ namespace ApiSDemo
 			//app.UseSession();
 
 			app.UseAuthorization();
-
-			app.UseSession();
 
 			app.UseEndpoints(endpoints =>
 			{

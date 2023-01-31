@@ -1,36 +1,41 @@
 ﻿@model User
 
-<div class="row">
+<div class="row justify-content-center">
     <div class="col-md-4">
-        <form asp-action="Profile" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <input type="hidden" asp-for="Id"/>
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+        @if (!String.IsNullOrEmpty(ViewBag.Alert))
+        {
+            <div class="alert alert-success" id="alert" role="alert">
+                @ViewBag.Alert
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" disabled/>
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" disabled/>
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="FileUpload" class="control-label">Profile Picture</label>
-                <img src="/Images/@Model.ImageUri" class="img-thumbnail rounded-circle" alt="Profile Picture" />
-                <input asp-for="FileUpload" class="form-control"/>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Update" class="btn btn-primary" />
-            </div>
-        </form>
+        }
+    <form asp-action="Profile" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group text-center">
+            <input type="hidden" asp-for="ImageUri" />
+            <img src="/Images/@Model.ImageUri" class="img-thumbnail mb-3" style="border-radius: 50%; position:relative; width:200px; height:200px; overflow:hidden;" alt="Profile Picture" />
+            <input asp-for="FileUpload" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Password" />
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control " readonly />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Dob" class="control-label"></label>
+            <input asp-for="Dob" class="form-control" />
+            <span asp-validation-for="Dob" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </form>
     </div>
 </div>
 

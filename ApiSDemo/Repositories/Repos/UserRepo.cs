@@ -23,9 +23,7 @@ namespace ApiSDemo.Repositories.Repos
 			var data = _Context.Users.Where(x => x.Id == user.Id).FirstOrDefault();
 			if (data != null)
 			{
-				data.Name= user.Name;
-				data.Email= user.Email;		
-				data.Password= user.Password;
+				data.Name= user.Name;	
 				data.ImageUri= user.ImageUri;
 				data.Dob = user.Dob;
 			}

@@ -335,3 +335,16 @@ C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netc
 C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\obj\Debug\netcoreapp3.1\ApiSDemoFrontEnd.genruntimeconfig.cache
 C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\obj\Debug\netcoreapp3.1\Razor\Views\User\Profile.cshtml.g.cs
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\System.Formats.Asn1.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Cng.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Security.Cryptography.Cng.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\lcom\Desktop\VS\AspProjects\ApiTestDemo\ApiSDemoFrontEnd\obj\Debug\netcoreapp3.1\Razor\Views\User\ChangePassword.cshtml.g.cs
